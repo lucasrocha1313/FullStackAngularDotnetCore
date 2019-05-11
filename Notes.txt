@@ -1,0 +1,20 @@
+//Create a webapi project
+dotnet new webapi -o DatingApp.API -n DatingApp.API
+
+//Create Database
+-> add EF with nugget: Microsoft.EntityFrameworkCore.sqlite
+-> https://docs.microsoft.com/en-us/ef/core/managing-schemas/migrations/
+>> dotnet ef migrations add InitialCreate // add an initial migration
+>> dotnet.exe ef database update //Create or update database
+
+//Connection Db
+-> appsettings.json
+	"ConnectionStrings": {
+		"DefaultConnection":"Data Source=DatingApp.db"
+	  },
+
+-> Startup.cs
+	Configure Database: services.AddDbContext<DataContext>(db => db.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
+
+//Create Project front-end angular
+>>ng new DatingApp-SPA //crete project
