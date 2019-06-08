@@ -1,0 +1,20 @@
+J
+HF:\Programming\fullstackCore\DatingApp.API\Controllers\AuthController.csL
+JF:\Programming\fullstackCore\DatingApp.API\Controllers\ValuesController.cs@
+>F:\Programming\fullstackCore\DatingApp.API\Data\DataContext.csO
+MF:\Programming\fullstackCore\DatingApp.API\Data\Interfaces\IAuthRepository.csP
+NF:\Programming\fullstackCore\DatingApp.API\Data\Repositories\AuthRepository.csD
+BF:\Programming\fullstackCore\DatingApp.API\Dtos\UserForLoginDto.csG
+EF:\Programming\fullstackCore\DatingApp.API\Dtos\UserForRegisterDto.csW
+UF:\Programming\fullstackCore\DatingApp.API\Migrations\20190504184543_InitialCreate.csb
+^F:\Programming\fullstackCore\DatingApp.API\Migrations\20190504184543_InitialCreate.Designer.csY
+WF:\Programming\fullstackCore\DatingApp.API\Migrations\20190511185301_AddedUserEntity.csd
+`F:\Programming\fullstackCore\DatingApp.API\Migrations\20190511185301_AddedUserEntity.Designer.csU
+QF:\Programming\fullstackCore\DatingApp.API\Migrations\DataContextModelSnapshot.cs;
+9F:\Programming\fullstackCore\DatingApp.API\Models\User.cs<
+:F:\Programming\fullstackCore\DatingApp.API\Models\Value.cs7
+5F:\Programming\fullstackCore\DatingApp.API\Program.cs7
+5F:\Programming\fullstackCore\DatingApp.API\Startup.csZ
+VC:\Users\Lucas Rocha\AppData\Local\Temp\.NETCoreApp,Version=v2.2.AssemblyAttributes.csi
+eF:\Programming\fullstackCore\DatingApp.API\obj\Debug\netcoreapp2.2\DatingApp.API.RazorAssemblyInfo.csd
+`F:\Programming\fullstackCore\DatingApp.API\obj\Debug\netcoreapp2.2\DatingApp.API.AssemblyInfo.cs

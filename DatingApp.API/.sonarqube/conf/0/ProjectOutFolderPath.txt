@@ -1,0 +1,1 @@
+F:\Programming\fullstackCore\DatingApp.API\.sonarqube\out\0

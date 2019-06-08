@@ -1,0 +1,14 @@
+Q
+HF:\Programming\fullstackCore\DatingApp.API\Controllers\AuthController.csutf-8S
+JF:\Programming\fullstackCore\DatingApp.API\Controllers\ValuesController.csutf-8G
+>F:\Programming\fullstackCore\DatingApp.API\Data\DataContext.csutf-8V
+MF:\Programming\fullstackCore\DatingApp.API\Data\Interfaces\IAuthRepository.csutf-8W
+NF:\Programming\fullstackCore\DatingApp.API\Data\Repositories\AuthRepository.csutf-8K
+BF:\Programming\fullstackCore\DatingApp.API\Dtos\UserForLoginDto.csutf-8N
+EF:\Programming\fullstackCore\DatingApp.API\Dtos\UserForRegisterDto.csutf-8^
+UF:\Programming\fullstackCore\DatingApp.API\Migrations\20190504184543_InitialCreate.csutf-8`
+WF:\Programming\fullstackCore\DatingApp.API\Migrations\20190511185301_AddedUserEntity.csutf-8B
+9F:\Programming\fullstackCore\DatingApp.API\Models\User.csutf-8C
+:F:\Programming\fullstackCore\DatingApp.API\Models\Value.csutf-8>
+5F:\Programming\fullstackCore\DatingApp.API\Program.csutf-8>
+5F:\Programming\fullstackCore\DatingApp.API\Startup.csutf-8
