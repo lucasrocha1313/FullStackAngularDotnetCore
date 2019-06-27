@@ -11,7 +11,10 @@ NF:\Programming\fullstackCore\DatingApp.API\Data\Repositories\AuthRepository.cs
  !"#%&')*+-/0235689:;<=>?ABCDFGHIx‚!#%-/0235:<=CDF
 BF:\Programming\fullstackCore\DatingApp.API\Dtos\UserForLoginDto.cs (08@HR 0=1;5=0;10=0;20=0;30=0;60=0;90=0Z1=4;2=0;4=0;6=0;8=0;10=0;12=0r¤
 EF:\Programming\fullstackCore\DatingApp.API\Dtos\UserForRegisterDto.cs (08@HR 0=1;5=0;10=0;20=0;30=0;60=0;90=0Z1=4;2=0;4=0;6=0;8=0;10=0;12=0r
-Ï
+¨
+@F:\Programming\fullstackCore\DatingApp.API\Helpers\Extensions.cs (08@HR 0=1;5=0;10=0;20=0;30=0;60=0;90=0Z1=1;2=0;4=0;6=0;8=0;10=0;12=0r	
+‚	
+Ï
 UF:\Programming\fullstackCore\DatingApp.API\Migrations\20190504184543_InitialCreate.cs (08@HR 0=1;5=0;10=0;20=0;30=0;60=0;90=0Z1=2;2=0;4=0;6=0;8=0;10=0;12=0r	
 ‚	Ö
 WF:\Programming\fullstackCore\DatingApp.API\Migrations\20190511185301_AddedUserEntity.cs (08@HR 0=1;5=0;10=0;20=0;30=0;60=0;90=0Z1=2;2=0;4=0;6=0;8=0;10=0;12=0r	
@@ -21,6 +24,6 @@ WF:\Programming\fullstackCore\DatingApp.API\Migrations\20190511185301_AddedUserE
 	
 •
 :F:\Programming\fullstackCore\DatingApp.API\Models\Value.cs (08@HR 0=1;5=0;10=0;20=0;30=0;60=0;90=0Z1=4;2=0;4=0;6=0;8=0;10=0;12=0r¥
-5F:\Programming\fullstackCore\DatingApp.API\Program.cs (08@HR 0=1;5=0;10=0;20=0;30=0;60=0;90=0Z1=2;2=0;4=0;6=0;8=0;10=0;12=0r	‚â
-5F:\Programming\fullstackCore\DatingApp.API\Startup.cs (08@HR 0=0;5=1;10=0;20=0;30=0;60=0;90=0Z1=3;2=1;4=0;6=0;8=0;10=0;12=0j 4=>Ar=	
-!"#$%&'()*+,-./01256789:;<?BCDEFGx‚#$%&'(),-79BCD
+5F:\Programming\fullstackCore\DatingApp.API\Program.cs (08@HR 0=1;5=0;10=0;20=0;30=0;60=0;90=0Z1=2;2=0;4=0;6=0;8=0;10=0;12=0r	‚ø
+5F:\Programming\fullstackCore\DatingApp.API\Startup.cs (08@HR 0=0;5=1;10=0;20=0;30=0;60=0;90=0Z1=3;2=1;4=0;6=0;8=0;10=0;12=0j$8MNQrL	
+ "%&'()*+,-./01234569:;<=>?@ABCEFGHIJKLORSTUVWx‚'()*+,-01;=ABCEFHIRST

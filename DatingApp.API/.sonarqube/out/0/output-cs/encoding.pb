@@ -5,7 +5,8 @@ JF:\Programming\fullstackCore\DatingApp.API\Controllers\ValuesController.csutf
 MF:\Programming\fullstackCore\DatingApp.API\Data\Interfaces\IAuthRepository.csutf-8W
 NF:\Programming\fullstackCore\DatingApp.API\Data\Repositories\AuthRepository.csutf-8K
 BF:\Programming\fullstackCore\DatingApp.API\Dtos\UserForLoginDto.csutf-8N
-EF:\Programming\fullstackCore\DatingApp.API\Dtos\UserForRegisterDto.csutf-8^
+EF:\Programming\fullstackCore\DatingApp.API\Dtos\UserForRegisterDto.csutf-8I
+@F:\Programming\fullstackCore\DatingApp.API\Helpers\Extensions.csutf-8^
 UF:\Programming\fullstackCore\DatingApp.API\Migrations\20190504184543_InitialCreate.csutf-8`
 WF:\Programming\fullstackCore\DatingApp.API\Migrations\20190511185301_AddedUserEntity.csutf-8B
 9F:\Programming\fullstackCore\DatingApp.API\Models\User.csutf-8C

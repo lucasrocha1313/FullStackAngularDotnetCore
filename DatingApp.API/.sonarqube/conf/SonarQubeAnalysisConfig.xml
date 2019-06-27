@@ -88,8 +88,8 @@
     <Property Name="sonaranalyzer-vbnet.pluginKey">vbnet</Property>
     <Property Name="sonar.java.collectAnalysisErrors">false</Property>
     <Property Name="sonar.updatecenter.url">https://update.sonarsource.org/update-center.properties</Property>
-    <Property Name="sonar.core.startTime">01/06/2019 14:52:05</Property>
     <Property Name="sonar.core.id">BF41A1F2-AWsUK4pEiSrQZBTxhsfX</Property>
+    <Property Name="sonar.core.startTime">14/06/2019 09:21:33</Property>
   </ServerSettings>
   <LocalSettings />
   <AnalyzersSettings>
@@ -100,16 +100,16 @@
       <AnalyzerPlugins>
         <AnalyzerPlugin Key="csharp" Version="7.11.0.8083" StaticResourceName="SonarAnalyzer-7.11.0.8083.zip">
           <AssemblyPaths>
-            <Path>C:\Users\Lucas Rocha\AppData\Local\Temp\.sonarqube\resources\0\Google.Protobuf.dll</Path>
-            <Path>C:\Users\Lucas Rocha\AppData\Local\Temp\.sonarqube\resources\0\SonarAnalyzer.CSharp.dll</Path>
-            <Path>C:\Users\Lucas Rocha\AppData\Local\Temp\.sonarqube\resources\0\SonarAnalyzer.dll</Path>
+            <Path>C:\Users\Lucas Rocha\AppData\Local\Temp\.sonarqube\resources\2\Google.Protobuf.dll</Path>
+            <Path>C:\Users\Lucas Rocha\AppData\Local\Temp\.sonarqube\resources\2\SonarAnalyzer.CSharp.dll</Path>
+            <Path>C:\Users\Lucas Rocha\AppData\Local\Temp\.sonarqube\resources\2\SonarAnalyzer.dll</Path>
           </AssemblyPaths>
         </AnalyzerPlugin>
         <AnalyzerPlugin Key="vbnet" Version="7.11.0.8083" StaticResourceName="SonarAnalyzer-7.11.0.8083.zip">
           <AssemblyPaths>
-            <Path>C:\Users\Lucas Rocha\AppData\Local\Temp\.sonarqube\resources\1\Google.Protobuf.dll</Path>
-            <Path>C:\Users\Lucas Rocha\AppData\Local\Temp\.sonarqube\resources\1\SonarAnalyzer.dll</Path>
-            <Path>C:\Users\Lucas Rocha\AppData\Local\Temp\.sonarqube\resources\1\SonarAnalyzer.VisualBasic.dll</Path>
+            <Path>C:\Users\Lucas Rocha\AppData\Local\Temp\.sonarqube\resources\3\Google.Protobuf.dll</Path>
+            <Path>C:\Users\Lucas Rocha\AppData\Local\Temp\.sonarqube\resources\3\SonarAnalyzer.dll</Path>
+            <Path>C:\Users\Lucas Rocha\AppData\Local\Temp\.sonarqube\resources\3\SonarAnalyzer.VisualBasic.dll</Path>
           </AssemblyPaths>
         </AnalyzerPlugin>
       </AnalyzerPlugins>
@@ -124,16 +124,16 @@
       <AnalyzerPlugins>
         <AnalyzerPlugin Key="csharp" Version="7.11.0.8083" StaticResourceName="SonarAnalyzer-7.11.0.8083.zip">
           <AssemblyPaths>
-            <Path>C:\Users\Lucas Rocha\AppData\Local\Temp\.sonarqube\resources\0\Google.Protobuf.dll</Path>
-            <Path>C:\Users\Lucas Rocha\AppData\Local\Temp\.sonarqube\resources\0\SonarAnalyzer.CSharp.dll</Path>
-            <Path>C:\Users\Lucas Rocha\AppData\Local\Temp\.sonarqube\resources\0\SonarAnalyzer.dll</Path>
+            <Path>C:\Users\Lucas Rocha\AppData\Local\Temp\.sonarqube\resources\2\Google.Protobuf.dll</Path>
+            <Path>C:\Users\Lucas Rocha\AppData\Local\Temp\.sonarqube\resources\2\SonarAnalyzer.CSharp.dll</Path>
+            <Path>C:\Users\Lucas Rocha\AppData\Local\Temp\.sonarqube\resources\2\SonarAnalyzer.dll</Path>
           </AssemblyPaths>
         </AnalyzerPlugin>
         <AnalyzerPlugin Key="vbnet" Version="7.11.0.8083" StaticResourceName="SonarAnalyzer-7.11.0.8083.zip">
           <AssemblyPaths>
-            <Path>C:\Users\Lucas Rocha\AppData\Local\Temp\.sonarqube\resources\1\Google.Protobuf.dll</Path>
-            <Path>C:\Users\Lucas Rocha\AppData\Local\Temp\.sonarqube\resources\1\SonarAnalyzer.dll</Path>
-            <Path>C:\Users\Lucas Rocha\AppData\Local\Temp\.sonarqube\resources\1\SonarAnalyzer.VisualBasic.dll</Path>
+            <Path>C:\Users\Lucas Rocha\AppData\Local\Temp\.sonarqube\resources\3\Google.Protobuf.dll</Path>
+            <Path>C:\Users\Lucas Rocha\AppData\Local\Temp\.sonarqube\resources\3\SonarAnalyzer.dll</Path>
+            <Path>C:\Users\Lucas Rocha\AppData\Local\Temp\.sonarqube\resources\3\SonarAnalyzer.VisualBasic.dll</Path>
           </AssemblyPaths>
         </AnalyzerPlugin>
       </AnalyzerPlugins>

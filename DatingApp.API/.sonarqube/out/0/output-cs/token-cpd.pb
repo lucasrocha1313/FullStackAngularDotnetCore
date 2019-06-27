@@ -1119,6 +1119,93 @@ EF:\Programming\fullstackCore\DatingApp.API\Dtos\UserForRegisterDto.cs
 ;) *
 }+ ,
 } 
+} ÿ
+@F:\Programming\fullstackCore\DatingApp.API\Helpers\Extensions.cs
+	namespace 	
+	DatingApp
+ 
+. 
+API 
+. 
+Helpers 
+{ 
+public 
+
+static 
+class 
+
+Extensions "
+{ 
+public 
+static 
+void 
+AddApplicationError .
+(. /
+this/ 3
+HttpResponse4 @
+responseA I
+,I J
+stringK Q
+messageR Y
+)Y Z
+{ 	
+response		 
+.		 
+Headers		 
+.		 
+Add		  
+(		  !
+$str		! 3
+,		3 4
+message		5 <
+)		< =
+;		= >
+response
+
+ 
+.
+
+ 
+Headers
+
+ 
+.
+
+ 
+Add
+
+  
+(
+
+  !
+$str
+
+! @
+,
+
+@ A
+$str
+
+B U
+)
+
+U V
+;
+
+V W
+response 
+. 
+Headers 
+. 
+Add  
+(  !
+$str! >
+,> ?
+$str@ C
+)C D
+;D E
+} 	
+} 
 } ê
 UF:\Programming\fullstackCore\DatingApp.API\Migrations\20190504184543_InitialCreate.cs
 	namespace 	
@@ -1568,222 +1655,307 @@ UseStartup 
 )% &
 ;& '
 } 
-} ç
+} ³+
 5F:\Programming\fullstackCore\DatingApp.API\Startup.cs
-	namespace 	
-	DatingApp
+	namespace 	
+	DatingApp
  
-. 
-API 
-{ 
-public 
+. 
+API 
+{ 
+public 
 
-class 
-Startup 
-{ 
-public 
-Startup 
-( 
-IConfiguration %
-configuration& 3
-)3 4
-{ 	
-Configuration 
-= 
-configuration )
-;) *
-} 	
-public 
-IConfiguration 
-Configuration +
-{, -
-get. 1
-;1 2
-}3 4
-public!! 
-void!! 
-ConfigureServices!! %
-(!!% &
-IServiceCollection!!& 8
-services!!9 A
-)!!A B
-{"" 	
-services## 
-.## 
-AddDbContext## !
-<##! "
-DataContext##" -
->##- .
-(##. /
-db##/ 1
-=>##2 4
-db##5 7
-.##7 8
-	UseSqlite##8 A
-(##A B
-Configuration##B O
-.##O P
-GetConnectionString##P c
-(##c d
-$str##d w
-)##w x
-)##x y
-)##y z
-;##z {
-services$$ 
-.$$ 
-AddMvc$$ 
-($$ 
-)$$ 
-.$$ #
-SetCompatibilityVersion$$ 5
-($$5 6 
-CompatibilityVersion$$6 J
-.$$J K
-Version_2_2$$K V
-)$$V W
-;$$W X
-services%% 
-.%% 
-AddCors%% 
-(%% 
-)%% 
-;%% 
-services&& 
-.&& 
-	AddScoped&& 
-<&& 
-IAuthRepository&& .
-,&&. /
-AuthRepository&&/ =
->&&= >
-(&&> ?
-)&&? @
-;&&@ A
+class 
+Startup 
+{ 
+public 
+Startup 
+( 
+IConfiguration %
+configuration& 3
+)3 4
+{ 	
+Configuration 
+= 
+configuration )
+;) *
+}   	
+public"" 
+IConfiguration"" 
+Configuration"" +
+{"", -
+get"". 1
+;""1 2
+}""3 4
+public%% 
+void%% 
+ConfigureServices%% %
+(%%% &
+IServiceCollection%%& 8
+services%%9 A
+)%%A B
+{&& 	
 services'' 
-.'' 
-AddAuthentication'' &
-(''& '
-JwtBearerDefaults''' 8
-.''8 9 
-AuthenticationScheme''9 M
-)''M N
-.(( 
-AddJwtBearer(( !
-(((! "
-options((" )
-=>((* ,
-{((, -
-options)) 
-.))  %
-TokenValidationParameters))  9
-=)): ;
-new))< ?%
-TokenValidationParameters))@ Y
-{** $
-ValidateIssuerSigningKey++ 4
-=++5 6
-true++7 ;
-,++; <
-IssuerSigningKey,, ,
-=,,- .
-new,,/ 2 
-SymmetricSecurityKey,,3 G
-(,,G H
-Encoding,,H P
-.,,P Q
-ASCII,,Q V
-.--0 1
-GetBytes--1 9
-(--9 :
-Configuration--: G
-.--G H
+.'' 
+AddDbContext'' !
+<''! "
+DataContext''" -
+>''- .
+(''. /
+db''/ 1
+=>''2 4
+db''5 7
+.''7 8
+	UseSqlite''8 A
+(''A B
+Configuration''B O
+.''O P
+GetConnectionString''P c
+(''c d
+$str''d w
+)''w x
+)''x y
+)''y z
+;''z {
+services(( 
+.(( 
+AddMvc(( 
+((( 
+)(( 
+.(( #
+SetCompatibilityVersion(( 5
+(((5 6 
+CompatibilityVersion((6 J
+.((J K
+Version_2_2((K V
+)((V W
+;((W X
+services)) 
+.)) 
+AddCors)) 
+()) 
+))) 
+;)) 
+services** 
+.** 
+	AddScoped** 
+<** 
+IAuthRepository** .
+,**. /
+AuthRepository**/ =
+>**= >
+(**> ?
+)**? @
+;**@ A
+services++ 
+.++ 
+AddAuthentication++ &
+(++& '
+JwtBearerDefaults++' 8
+.++8 9 
+AuthenticationScheme++9 M
+)++M N
+.,, 
+AddJwtBearer,, !
+(,,! "
+options,," )
+=>,,* ,
+{,,, -
+options-- 
+.--  %
+TokenValidationParameters--  9
+=--: ;
+new--< ?%
+TokenValidationParameters--@ Y
+{.. $
+ValidateIssuerSigningKey// 4
+=//5 6
+true//7 ;
+,//; <
+IssuerSigningKey00 ,
+=00- .
+new00/ 2 
+SymmetricSecurityKey003 G
+(00G H
+Encoding00H P
+.00P Q
+ASCII00Q V
+.110 1
+GetBytes111 9
+(119 :
+Configuration11: G
+.11G H
 
-GetSection--H R
-(--R S
-$str--S f
-)--f g
-.--g h
-Value--h m
-)--m n
-)--n o
-,--o p
-ValidateAudience.. ,
-=..- .
-false../ 4
-,..4 5
-ValidateIssuer// *
-=//+ ,
-false//- 2
-}00 
-;00 
-}11 
-)11 
-;11 
-}22 	
-public55 
-void55 
-	Configure55 
-(55 
-IApplicationBuilder55 1
-app552 5
-,555 6
-IHostingEnvironment557 J
-env55K N
-)55N O
-{66 	
-if77 
-(77 
-env77 
-.77 
-IsDevelopment77 !
-(77! "
-)77" #
-)77# $
-{88 
-app99 
-.99 %
-UseDeveloperExceptionPage99 -
-(99- .
-)99. /
-;99/ 0
-}:: 
-else;; 
-{<< 
-}?? 
-appBB 
-.BB 
-UseCorsBB 
-(BB 
-cBB 
-=>BB 
-cBB 
-.BB 
-AllowAnyOriginBB -
-(BB- .
-)BB. /
-.BB/ 0
-AllowAnyMethodBB0 >
-(BB> ?
-)BB? @
-.BB@ A
-AllowAnyHeaderBBA O
-(BBO P
-)BBP Q
-)BBQ R
-;BBR S
-appCC 
-.CC 
-UseAuthenticationCC !
-(CC! "
-)CC" #
-;CC# $
-appDD 
-.DD 
-UseMvcDD 
-(DD 
-)DD 
-;DD 
-}EE 	
-}FF 
-}GG 
+GetSection11H R
+(11R S
+$str11S f
+)11f g
+.11g h
+Value11h m
+)11m n
+)11n o
+,11o p
+ValidateAudience22 ,
+=22- .
+false22/ 4
+,224 5
+ValidateIssuer33 *
+=33+ ,
+false33- 2
+}44 
+;44 
+}55 
+)55 
+;55 
+}66 	
+public99 
+void99 
+	Configure99 
+(99 
+IApplicationBuilder99 1
+app992 5
+,995 6
+IHostingEnvironment997 J
+env99K N
+)99N O
+{:: 	
+if;; 
+(;; 
+env;; 
+.;; 
+IsDevelopment;; !
+(;;! "
+);;" #
+);;# $
+{<< 
+app== 
+.== %
+UseDeveloperExceptionPage== -
+(==- .
+)==. /
+;==/ 0
+}>> 
+else?? 
+{@@ 
+appAA 
+.AA 
+UseExceptionHandlerAA '
+(AA' (
+builderAA) 0
+=>AA1 3
+{AA4 5
+builderBB 
+.BB 
+RunBB 
+(BB  
+asyncBB  %
+contextBB& -
+=>BB. 0
+{BB1 2
+contextCC 
+.CC  
+ResponseCC  (
+.CC( )
+
+StatusCodeCC) 3
+=CC4 5
+(CC6 7
+intCC7 :
+)CC: ;
+HttpStatusCodeCC; I
+.CCI J
+InternalServerErrorCCJ ]
+;CC] ^
+varEE 
+errorEE !
+=EE" #
+contextEE$ +
+.EE+ ,
+FeaturesEE, 4
+.EE4 5
+GetEE5 8
+<EE8 9$
+IExceptionHandlerFeatureEE9 Q
+>EEQ R
+(EER S
+)EES T
+;EET U
+ifFF 
+(FF 
+errorFF  
+!=FF! #
+nullFF$ (
+)FF( )
+{GG 
+contextHH #
+.HH# $
+ResponseHH$ ,
+.HH, -
+AddApplicationErrorHH- @
+(HH@ A
+errorHHA F
+.HHF G
+ErrorHHG L
+.HHL M
+MessageHHM T
+)HHT U
+;HHU V
+awaitII  
+contextII! (
+.II( )
+ResponseII) 1
+.II1 2
+
+WriteAsyncII2 <
+(II< =
+errorII= B
+.IIB C
+ErrorIIC H
+.IIH I
+MessageIII P
+)IIP Q
+;IIQ R
+}JJ 
+}KK 
+)KK 
+;KK 
+}LL 
+)LL 
+;LL 
+}OO 
+appRR 
+.RR 
+UseCorsRR 
+(RR 
+cRR 
+=>RR 
+cRR 
+.RR 
+AllowAnyOriginRR -
+(RR- .
+)RR. /
+.RR/ 0
+AllowAnyMethodRR0 >
+(RR> ?
+)RR? @
+.RR@ A
+AllowAnyHeaderRRA O
+(RRO P
+)RRP Q
+)RRQ R
+;RRR S
+appSS 
+.SS 
+UseAuthenticationSS !
+(SS! "
+)SS" #
+;SS# $
+appTT 
+.TT 
+UseMvcTT 
+(TT 
+)TT 
+;TT 
+}UU 	
+}VV 
+}WW 
