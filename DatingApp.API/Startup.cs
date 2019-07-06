@@ -39,7 +39,14 @@ namespace DatingApp.API
             services.AddDbContext<DataContext>(db => db.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddCors();
-            services.AddScoped<IAuthRepository,AuthRepository>();
+            services.AddTransient<Seed>();
+            AddRepositories(services);
+            AddAuthenticationService(services);
+            
+        }
+
+        private void AddAuthenticationService(IServiceCollection services)
+        {
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                     .AddJwtBearer(options =>{
                         options.TokenValidationParameters = new TokenValidationParameters
@@ -53,8 +60,14 @@ namespace DatingApp.API
                     });
         }
 
+        private void AddRepositories(IServiceCollection services)
+        {            
+            services.AddScoped<IAuthRepository,AuthRepository>();
+            services.AddScoped<IDatingRepository,DatingRepository>();
+        }
+
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, Seed seeders)
         {
             if (env.IsDevelopment())
             {
@@ -79,6 +92,7 @@ namespace DatingApp.API
             }
 
             // app.UseHttpsRedirection();
+            //seeders.SeedUsers();
             app.UseCors(c => c.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             app.UseAuthentication();
             app.UseMvc();
