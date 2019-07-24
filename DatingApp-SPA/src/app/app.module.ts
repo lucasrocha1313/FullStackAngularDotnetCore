@@ -2,8 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
-import { BsDropdownModule } from 'ngx-bootstrap';
+import { BsDropdownModule, TabsModule } from 'ngx-bootstrap';
 import { appRoutes } from './routes';
+import { JwtModule } from '@auth0/angular-jwt';
+import {NgxGalleryModule} from 'ngx-gallery'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,7 +22,13 @@ import { RouterModule } from '@angular/router';
 import { AuthGuard } from './_guard/auth.guard';
 import { UserService } from './_services/user.service';
 import { MemberCardComponent } from './member/member-card/member-card.component';
+import { MemberDetailComponent } from './member/member-detail/member-detail.component';
+import { MemberDetailedResolver } from './_resolver/member-detail.resolver';
+import { MemberListdResolver } from './_resolver/member-list.resolver';
 
+export function GetToken() {
+   return localStorage.getItem('token');
+}
 @NgModule({
    declarations: [
       AppComponent,
@@ -30,7 +38,8 @@ import { MemberCardComponent } from './member/member-card/member-card.component'
       MemberListComponent,
       ListComponent,
       MessagesComponent,
-      MemberCardComponent
+      MemberCardComponent,
+      MemberDetailComponent
    ],
    imports: [
       BrowserModule,
@@ -38,14 +47,25 @@ import { MemberCardComponent } from './member/member-card/member-card.component'
       HttpClientModule,
       FormsModule,
       BsDropdownModule.forRoot(),
-      RouterModule.forRoot(appRoutes)
+      TabsModule.forRoot(),
+      RouterModule.forRoot(appRoutes),
+      NgxGalleryModule,
+      JwtModule.forRoot({
+         config: {
+            tokenGetter: GetToken,
+            whitelistedDomains: ['localhost:5000'],
+            blacklistedRoutes: ['localhost:5000/api/auth']
+         }
+      })
    ],
    providers: [
       AuthService,
       ErrorInterceptorProvider,
       AlertifyService,
       AuthGuard,
-      UserService
+      UserService,
+      MemberDetailedResolver,
+      MemberListdResolver
    ],
    bootstrap: [
       AppComponent
