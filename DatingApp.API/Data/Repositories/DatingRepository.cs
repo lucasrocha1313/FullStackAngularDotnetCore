@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using DatingApp.API.Data.Interfaces;
 using DatingApp.API.Models;
@@ -25,10 +26,25 @@ namespace DatingApp.API.Data.Repositories
             _context.Remove(entity);
         }
 
+        public async Task<Photo> GetPhoto(Guid id)
+        {
+            var photo = await _context.Photos.FirstOrDefaultAsync(p => p.Id == id);
+
+            return photo;
+        }
+
         public async Task<User> GetUser(Guid id)
         {
             var user = await _context.Users.Include(u => u.Photos).FirstOrDefaultAsync(u => u.Id == id);
             return user;
+        }
+
+        public async Task<Photo> GetUserMainPhoto(Guid userId)
+        {
+            var mainPhoto = await _context.Photos.Where(p => p.UserId == userId)
+                .FirstOrDefaultAsync(p => p.IsMain);
+
+            return mainPhoto;
         }
 
         public async Task<IEnumerable<User>> GetUsers()
