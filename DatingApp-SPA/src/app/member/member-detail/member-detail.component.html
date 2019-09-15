@@ -34,13 +34,13 @@
         <tabset class="member-tabset">
           <tab heading="About {{user.knownAs}}">
             <h4>Description</h4>
-            <p>{{user.introduction}}</p>
+            <p>{{user.introduction || 'No description'}}</p>
             <h4>Looking For</h4>
-            <p>{{user.lookingFor}}</p>
+            <p>{{user.lookingFor || 'No text'}}</p>
           </tab>
           <tab heading="Interests">
             <h4>Interests</h4>
-            <p>{{user.interests}}</p>
+            <p>{{user.interests|| 'No text'}}</p>
           </tab>
           <tab heading="Photos">
             <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
