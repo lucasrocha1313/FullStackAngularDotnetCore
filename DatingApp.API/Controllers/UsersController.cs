@@ -32,7 +32,7 @@ namespace DatingApp.API.Controllers
             return Ok(usersForReturn);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id}", Name = "GetUser")]
         public async Task<IActionResult> GetUser(Guid id)
         {
             var user = await _datingRepository.GetUser(id);

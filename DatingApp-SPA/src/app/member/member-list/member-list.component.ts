@@ -18,7 +18,7 @@ export class MemberListComponent implements OnInit {
 
   ngOnInit() {
     this.route.data.subscribe(data => {
-      this.users = data.users.filter(u => u.name.toLowerCase() !== this.authService.getUserName().toLowerCase());;
+      this.users = data.users.filter(u => u.name.toLowerCase() !== this.authService.getUserName().toLowerCase());
     });
   }
 
