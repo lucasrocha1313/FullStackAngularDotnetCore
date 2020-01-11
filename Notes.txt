@@ -1,3 +1,20 @@
+//install
+.net core 3.1
+nodejs 12.14
+
+#extensions
+C#
+C# extensions
+nuget package
+angular snippets
+angular language
+auto rename tag
+Bracket Pair Colorizer 2
+Debugger for Chrome
+Material Icon Theme
+Prettier - Code formatter
+angular2-switcher
+
 //Create a webapi project
 dotnet new webapi -o DatingApp.API -n DatingApp.API
 
@@ -18,3 +35,6 @@ dotnet new webapi -o DatingApp.API -n DatingApp.API
 
 //Create Project front-end angular
 >>ng new DatingApp-SPA //crete project
+
+
+168
