@@ -15,7 +15,7 @@ export class MessagesComponent implements OnInit {
 
   messages: Message[];
   pagination: Pagination;
-  messageContainer = 'Unread'
+  messageContainer = 'Unread';
 
   constructor(private userService: UserService, private authService: AuthService,
               private route: ActivatedRoute, private alertify: AlertifyService) { }
@@ -36,6 +36,17 @@ export class MessagesComponent implements OnInit {
       }, error => {
         this.alertify.Error(error);
       });
+  }
+
+  deleteMessage(id: string) {
+    this.alertify.Confirm('Are you sure you want to delete this message?', () => {
+      this.userService.deleteMessage(id, this.authService.decodedToken.nameid).subscribe(() => {
+        this.messages.splice(this.messages.findIndex(m => m.id === id), 1);
+        this.alertify.Success('Message has been deleted');
+      }, erro => {
+        this.alertify.Error('Failed to Delete message: ' + erro);
+      });
+    });
   }
 
   pageChanged(event: any): void {

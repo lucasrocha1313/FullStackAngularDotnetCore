@@ -34,7 +34,7 @@ namespace DatingApp.API.Controllers
             if (checkUserAuthorized(userId))
                 return Unauthorized();
 
-            var messageFromRepository = _datingRepository.GetMessage(id);
+            var messageFromRepository = await _datingRepository.GetMessage(id);
 
             if (messageFromRepository == null)
                 return NotFound();
@@ -74,7 +74,8 @@ namespace DatingApp.API.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateMessage(Guid userId, MessageForCreationDto messageForCreationDto)
         {
-            if (checkUserAuthorized(userId))
+            var sender = await _datingRepository.GetUser(userId);
+            if (checkUserAuthorized(sender.Id))
                 return Unauthorized();
 
             messageForCreationDto.SenderId = userId;
@@ -87,11 +88,14 @@ namespace DatingApp.API.Controllers
             var message = _mapper.Map<Message>(messageForCreationDto);
 
             _datingRepository.Add(message);
-
-            var messageToReturn = _mapper.Map<MessageForCreationDto>(message);
+            
 
             if (await _datingRepository.SaveAll())
+            {
+                var messageToReturn = _mapper.Map<MessageToReturnDto>(message);
                 return CreatedAtRoute("GetMessage", new { id = message.Id }, messageToReturn);
+            }
+                
 
             throw new Exception("Creating message failed on save");
         }
@@ -99,6 +103,50 @@ namespace DatingApp.API.Controllers
         private bool checkUserAuthorized(Guid userId)
         {
             return userId != Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+        }
+
+        [HttpPost("{id}")]
+        public async Task<IActionResult> DeleteMessage(Guid id, Guid userId)
+        {
+            if (checkUserAuthorized(userId))
+                    return Unauthorized();
+            
+            var messageFromRepo = await _datingRepository.GetMessage(id);
+            
+            if(messageFromRepo.SenderId == userId && !messageFromRepo.SenderDeleted)
+                messageFromRepo.SenderDeleted = true;
+
+            if(messageFromRepo.RecipientId == userId && !messageFromRepo.RecipientDeleted)
+                messageFromRepo.RecipientDeleted = true;
+            
+            if(messageFromRepo.SenderDeleted && messageFromRepo.RecipientDeleted)
+                _datingRepository.Delete(messageFromRepo);
+            
+            if(await _datingRepository.SaveAll())
+            {
+                return NoContent();
+            }
+
+            throw new Exception("Error deleting the message!");
+        }
+
+        [HttpPost("{id}/read")]
+        public async Task<IActionResult> MarkMessageAsRead(Guid userId, Guid id)
+        {
+            if(checkUserAuthorized(userId))
+                return Unauthorized();
+            
+            var message = await _datingRepository.GetMessage(id);
+
+            if(message.RecipientId != userId)
+                return Unauthorized();
+
+            message.IsRead = true;
+            message.DateRead = DateTime.Now;
+            
+            await _datingRepository.SaveAll();
+
+            return NoContent();
         }
     }
 }
