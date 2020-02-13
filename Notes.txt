@@ -1,3 +1,4 @@
+mysql login: appuser password: passwordAPP@123
 //install
 .net core 3.1
 nodejs 12.14
