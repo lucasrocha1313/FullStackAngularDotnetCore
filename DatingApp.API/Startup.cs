@@ -48,7 +48,10 @@ namespace DatingApp.API
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<DataContext>(db => db.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<DataContext>(db => {
+                db.UseLazyLoadingProxies();
+                db.UseMySql(Configuration.GetConnectionString("DefaultConnection"));
+            });
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
             .AddJsonOptions(opt => {
